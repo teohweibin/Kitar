@@ -4,7 +4,6 @@
 
 Residents learn how to sort (search or photo scan), drop recyclables in a bag that carries their unit's QR code, and a collector weighs and scans each bag so every kilogram is recorded to that unit. Residents earn points and townships compete on a monthly leaderboard; SDP's sustainability team sees verified kilograms on a dashboard.
 
-> Concept prototype. Not affiliated with or endorsed by Sime Darby Property. All townships, units, people and numbers are sample data.
 
 ## Roles
 
