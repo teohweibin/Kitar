@@ -26,3 +26,6 @@ dist-ssr
 # Env files (only .env.example is committed)
 .env*
 !.env.example
+
+# Pitch deck work (contains the organiser template; not part of the app)
+pitch/
