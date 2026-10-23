@@ -64,20 +64,3 @@ The scanner recognises the items described in `src/data/scanLabels.json`. After 
 npm run build:scan-embeddings
 ```
 
-## Scripts
-
-| Command | What it does |
-|---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Production build into `dist/` |
-| `npm run preview` | Serve the production build |
-| `npm run lint` | oxlint |
-| `npm run build:scan-embeddings` | Recompute MobileCLIP text embeddings for the scan prompts |
-
-## Deploy (Vercel)
-
-Import the GitHub repo in Vercel (framework preset: Vite), add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables, deploy, then add the Vercel URL to Supabase → Authentication → URL Configuration (Site URL and Redirect URLs). `vercel.json` rewrites every path to `index.html` so deep links work.
-
-## Project planning files
-
-This repo was built with KDBM Lite: `START_HERE.md`, `project-brief.md`, `architecture.md`, `design.md`, `build-blueprint.md`, `build-status.md` and `work-cards/` record the plan and progress. `demo-script.md` is the 3-minute pitch demo.
