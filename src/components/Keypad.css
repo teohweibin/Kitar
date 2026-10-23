@@ -1,0 +1,29 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.keypad__key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 100ms;
+}
+
+.keypad__key:active:not(:disabled) {
+  background: var(--surface-strong);
+}
+
+.keypad__key:disabled {
+  opacity: 0.5;
+}

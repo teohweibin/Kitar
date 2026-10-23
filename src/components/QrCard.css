@@ -1,0 +1,54 @@
+/* The only white surface in the app: QR codes scan most reliably dark-on-light. */
+.qr-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px 20px;
+  border-radius: var(--radius-card);
+  background: #FFFFFF;
+  color: #0D0A08;
+  text-align: center;
+}
+
+.qr-card__brand {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8A4513;
+}
+
+.qr-card__code {
+  width: min(260px, 70vw);
+  aspect-ratio: 1;
+}
+
+.qr-card__code svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-card__code--loading {
+  border-radius: 12px;
+  background: #EEE8E2;
+}
+
+.qr-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.qr-card__unit {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.qr-card__township {
+  font-size: 14px;
+  color: #5C5148;
+}

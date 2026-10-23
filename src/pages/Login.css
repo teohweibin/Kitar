@@ -1,0 +1,146 @@
+.login {
+  gap: 20px;
+  padding-top: 16px;
+}
+
+.login__brand {
+  padding: 8px 4px;
+}
+
+.login__name {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.login__name span {
+  color: var(--primary);
+}
+
+.login__tagline {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 17px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login__title {
+  font-size: 20px;
+}
+
+.login__demo-title {
+  font-size: 15px;
+}
+
+.login__demo-hint {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.login__demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.login__demo-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-control);
+  background: transparent;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.login__demo-item:hover {
+  background: var(--surface);
+}
+
+.login__title--small {
+  font-size: 16px;
+}
+
+.login__quick {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login__quick-hint {
+  margin-top: -6px;
+  font-size: 14px;
+}
+
+.login__quick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login__quick-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 16px;
+  border: 1px solid rgba(200, 100, 30, 0.35);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms, border-color 150ms, transform 150ms;
+}
+
+.login__quick-item:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: rgba(200, 100, 30, 0.1);
+  transform: translateY(-1px);
+}
+
+.login__quick-item:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.login__quick-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.login__quick-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__quick-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login__quick-note {
+  font-size: 13px;
+}

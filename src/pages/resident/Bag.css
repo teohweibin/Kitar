@@ -1,0 +1,21 @@
+.bag__skeleton {
+  height: 360px;
+}
+
+.bag__instruction {
+  text-align: center;
+  padding: 4px 8px;
+}
+
+.bag__tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.bag__tip-icon {
+  flex: none;
+  color: var(--gold);
+}

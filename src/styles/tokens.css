@@ -1,0 +1,127 @@
+/* Design tokens and base styles. Values come from design.md → Color / Contrast Rules. */
+@import '@fontsource/poppins/latin-400.css';
+@import '@fontsource/poppins/latin-500.css';
+@import '@fontsource/poppins/latin-600.css';
+@import '@fontsource/poppins/latin-700.css';
+
+:root {
+  --bg: #0D0A08;
+  --bg-elev: #17120F;
+  --surface: rgba(255, 240, 225, 0.05);
+  --surface-strong: rgba(255, 240, 225, 0.09);
+  --border: rgba(255, 240, 225, 0.10);
+  --text: #F7F1EA;
+  --text-muted: #A99D92;
+  --primary: #C8641E;
+  --primary-hover: #DA7430;
+  --on-primary: #1A0E05;
+  --accent-text: #F29A55;
+  --gold: #F2B544;
+  --success: #4CC38A;
+  --danger: #E5484D;
+
+  --radius-card: 24px;
+  --radius-control: 16px;
+  --radius-pill: 999px;
+  --screen-pad: 20px;
+  --gap: 12px;
+  --nav-height: 72px;
+
+  --font-sans: 'Poppins', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Warm ember glow behind the top of every screen. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 300px;
+  background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(200, 100, 30, 0.18), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-text);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

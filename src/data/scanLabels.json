@@ -1,0 +1,229 @@
+{
+  "_note": "Text prompts for the photo scan. `item` must equal waste_items.name_en in supabase/seed.sql; null = not a waste item (used to reject photos of people, rooms, etc.). After editing, run: npm run build:scan-embeddings",
+  "labels": [
+    {
+      "item": "Newspaper",
+      "prompts": [
+        "a folded newspaper",
+        "a stack of old newspapers"
+      ]
+    },
+    {
+      "item": "Cardboard box",
+      "prompts": [
+        "a brown cardboard box",
+        "a flattened cardboard parcel box",
+        "an open cardboard box"
+      ]
+    },
+    {
+      "item": "Magazine or book",
+      "prompts": [
+        "a magazine",
+        "an old paperback book"
+      ]
+    },
+    {
+      "item": "Envelope and office paper",
+      "prompts": [
+        "a paper envelope",
+        "a stack of printed office paper"
+      ]
+    },
+    {
+      "item": "Egg tray (paper)",
+      "prompts": [
+        "an empty paper egg tray"
+      ]
+    },
+    {
+      "item": "PET drink bottle",
+      "prompts": [
+        "a clear plastic water bottle",
+        "a plastic soft drink bottle"
+      ]
+    },
+    {
+      "item": "Detergent or shampoo bottle",
+      "prompts": [
+        "a plastic shampoo bottle",
+        "a plastic detergent bottle"
+      ]
+    },
+    {
+      "item": "Plastic milk jug",
+      "prompts": [
+        "a white plastic milk jug"
+      ]
+    },
+    {
+      "item": "Clean plastic bag",
+      "prompts": [
+        "a plastic shopping bag"
+      ]
+    },
+    {
+      "item": "Plastic food container (hard)",
+      "prompts": [
+        "a hard plastic food container with a lid"
+      ]
+    },
+    {
+      "item": "Aluminium drink can",
+      "prompts": [
+        "an aluminium soda can",
+        "a crushed aluminium drink can",
+        "aluminium beverage cans",
+        "a can of soft drink"
+      ]
+    },
+    {
+      "item": "Food tin",
+      "prompts": [
+        "a metal food tin can",
+        "an empty sardine tin"
+      ]
+    },
+    {
+      "item": "Glass bottle",
+      "prompts": [
+        "a glass bottle",
+        "an empty glass sauce bottle"
+      ]
+    },
+    {
+      "item": "Glass jar",
+      "prompts": [
+        "an empty glass jar"
+      ]
+    },
+    {
+      "item": "Drink carton (Tetra Pak)",
+      "prompts": [
+        "a Tetra Pak drink carton",
+        "a small juice box carton",
+        "a milk carton"
+      ]
+    },
+    {
+      "item": "Mobile phone",
+      "prompts": [
+        "an old mobile phone",
+        "a smartphone"
+      ]
+    },
+    {
+      "item": "Laptop or tablet",
+      "prompts": [
+        "a laptop computer",
+        "a tablet computer"
+      ]
+    },
+    {
+      "item": "Remote, keyboard or mouse",
+      "prompts": [
+        "a TV remote control",
+        "a computer keyboard",
+        "a computer mouse"
+      ]
+    },
+    {
+      "item": "Used batteries",
+      "prompts": [
+        "small AA batteries",
+        "a pile of used household batteries"
+      ]
+    },
+    {
+      "item": "Charger and cables",
+      "prompts": [
+        "a phone charger with a cable",
+        "a tangle of electric cables"
+      ]
+    },
+    {
+      "item": "Clothes",
+      "prompts": [
+        "a folded T-shirt",
+        "a pile of old clothes",
+        "a T-shirt"
+      ]
+    },
+    {
+      "item": "Jeans and trousers",
+      "prompts": [
+        "a pair of blue jeans"
+      ]
+    },
+    {
+      "item": "Shoes",
+      "prompts": [
+        "a pair of old shoes",
+        "a pair of sneakers"
+      ]
+    },
+    {
+      "item": "Bags",
+      "prompts": [
+        "a backpack",
+        "a handbag"
+      ]
+    },
+    {
+      "item": "Used cooking oil",
+      "prompts": [
+        "a bottle of used cooking oil"
+      ]
+    },
+    {
+      "item": "Polystyrene food box",
+      "prompts": [
+        "a white polystyrene takeaway food box",
+        "a styrofoam food container"
+      ]
+    },
+    {
+      "item": "Used tissue",
+      "prompts": [
+        "a crumpled used tissue"
+      ]
+    },
+    {
+      "item": "Food waste",
+      "prompts": [
+        "leftover food scraps",
+        "a plate of leftover rice"
+      ]
+    },
+    {
+      "item": "Disposable diaper",
+      "prompts": [
+        "a disposable diaper"
+      ]
+    },
+    {
+      "item": "Greasy pizza box",
+      "prompts": [
+        "a greasy pizza box"
+      ]
+    },
+    {
+      "item": "Plastic straw and cutlery",
+      "prompts": [
+        "plastic straws",
+        "disposable plastic spoons and forks"
+      ]
+    },
+    {
+      "item": null,
+      "prompts": [
+        "a person's face",
+        "a hand",
+        "an empty room",
+        "a table top",
+        "a cat or a dog",
+        "a blurry photo"
+      ]
+    }
+  ]
+}

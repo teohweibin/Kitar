@@ -1,0 +1,113 @@
+.pile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pile__title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pile__hint {
+  font-size: 13px;
+}
+
+.pile__group {
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.pile__group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pile__ban {
+  color: var(--danger);
+}
+
+.pile__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pile__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pile__name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pile__ms {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.pile__remove {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.pile__remove:hover {
+  background: rgba(229, 72, 77, 0.12);
+  color: var(--danger);
+}
+
+.pile__add {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pile__add svg {
+  position: absolute;
+  left: 16px;
+  color: var(--accent-text);
+  pointer-events: none;
+}
+
+.pile__select {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px 0 44px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--accent-text);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+}
+
+.pile__select option {
+  background: var(--bg-elev);
+  color: var(--text);
+}

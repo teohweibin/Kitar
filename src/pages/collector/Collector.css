@@ -1,0 +1,201 @@
+.collector-screen {
+  gap: 16px;
+}
+
+/* Scan bag */
+.collector-scan {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-card);
+  background: #000;
+  aspect-ratio: 1;
+}
+
+.collector-scan__reader,
+.collector-scan__reader video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.collector-scan__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(13, 10, 8, 0.8);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.collector-scan__notice {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px;
+  text-align: center;
+  background: var(--bg-elev);
+}
+
+.collector-scan__notice svg {
+  color: var(--accent-text);
+}
+
+.collector-manual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.collector-manual__input {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* Weigh */
+.weigh__unit {
+  text-align: center;
+}
+
+.weigh__unit-code {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.weigh__label {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.weigh__categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.weigh__category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 60px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.weigh__category.is-selected {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.weigh__category.is-selected .category-icon {
+  background: rgba(26, 14, 5, 0.15);
+  border-color: transparent;
+  color: var(--on-primary);
+}
+
+.weigh__display {
+  margin-bottom: 12px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.weigh__unit-kg {
+  margin-left: 8px;
+  color: var(--text-muted);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Opaque footer that keeps Save in reach while the keypad scrolls; at the bottom of the
+   page it sits below the keypad, so no key stays hidden. */
+.weigh__footer {
+  position: sticky;
+  bottom: 0;
+  margin: 0 calc(var(--screen-pad) * -1) -24px;
+  padding: 12px var(--screen-pad) calc(env(safe-area-inset-bottom) + 16px);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.weigh__save {
+  min-height: 60px;
+  font-size: 17px;
+}
+
+.weigh__confirm {
+  font-size: 18px;
+}
+
+.weigh__confirm-note {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.weigh__confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Done */
+.done {
+  align-items: center;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.done__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: rgba(76, 195, 138, 0.15);
+  border: 2px solid var(--success);
+  color: var(--success);
+}
+
+.done__title {
+  font-size: 28px;
+}
+
+.done__summary {
+  font-size: 18px;
+}
+
+.done__points {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.done__next {
+  min-height: 60px;
+  margin-top: 16px;
+  font-size: 17px;
+}

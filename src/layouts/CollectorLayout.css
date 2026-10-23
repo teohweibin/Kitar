@@ -1,0 +1,12 @@
+/* Outdoor rules from design.md: solid cards instead of glass, pure white text, one size larger. */
+.collector {
+  --surface: var(--bg-elev);
+  --text: #FFFFFF;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.collector .glass-card {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}

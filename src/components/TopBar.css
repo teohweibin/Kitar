@@ -1,0 +1,42 @@
+.topbar {
+  padding: calc(env(safe-area-inset-top) + 12px) var(--screen-pad) 8px;
+}
+
+.topbar__row {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.topbar__title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.topbar__slot {
+  display: flex;
+}
+
+.topbar__slot--right {
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.icon-btn:hover {
+  background: var(--surface-strong);
+}

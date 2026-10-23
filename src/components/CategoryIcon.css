@@ -1,0 +1,16 @@
+.category-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-control);
+  background: rgba(200, 100, 30, 0.08);
+  border: 1px solid rgba(200, 100, 30, 0.18);
+  color: var(--accent-text);
+}
+
+.category-icon--none {
+  background: rgba(229, 72, 77, 0.08);
+  border-color: rgba(229, 72, 77, 0.2);
+  color: var(--danger);
+}

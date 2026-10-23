@@ -1,0 +1,35 @@
+/* Printing prints only the bag label (.print-label), sized for an A6 sheet. */
+@page {
+  size: A6;
+  margin: 10mm;
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-label,
+  .print-label * {
+    visibility: visible;
+  }
+
+  .print-label {
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    border-radius: 0;
+  }
+
+  .print-label .qr-card__code {
+    width: 70mm;
+  }
+}

@@ -1,0 +1,96 @@
+.points-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.points-hero__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.points-hero__label {
+  font-size: 13px;
+}
+
+.points-hero__balance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.points-hero__coin {
+  color: var(--gold);
+}
+
+.points-hero__rank {
+  flex: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(200, 100, 30, 0.45);
+  border-radius: var(--radius-pill);
+  background: rgba(200, 100, 30, 0.12);
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.points-hero__progress {
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.points-hero__progress-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.points-hero__progress-head span:last-child {
+  color: var(--accent-text);
+}
+
+.points-hero__track {
+  position: relative;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-strong);
+}
+
+.points-hero__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+}
+
+.points-hero__fill::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-hover);
+  box-shadow: 0 0 10px rgba(218, 116, 48, 0.7);
+  transform: translateY(-50%);
+}
+
+.points-hero__note {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.points-hero__link {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}

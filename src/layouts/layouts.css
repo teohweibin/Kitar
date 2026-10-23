@@ -1,0 +1,21 @@
+.app-shell {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+
+.app-shell--resident {
+  padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom) + 24px);
+}
+
+.app-shell--wide {
+  max-width: 1200px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 8px var(--screen-pad) 24px;
+}
