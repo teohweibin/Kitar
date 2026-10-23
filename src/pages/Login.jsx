@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
-import { BarChart3, CircleAlert, ClipboardList, Home as HomeIcon, Lock, Mail } from 'lucide-react'
+import { BarChart3, CircleAlert, ClipboardList, Home as HomeIcon } from 'lucide-react'
 import { useAuth, homeFor } from '../lib/authContext.js'
 import { supabaseConfigError } from '../lib/supabase.js'
 import TopBar from '../components/TopBar.jsx'
-import GlassCard from '../components/GlassCard.jsx'
 import LoadingScreen from '../components/LoadingScreen.jsx'
 import NoProfileScreen from '../components/NoProfileScreen.jsx'
 import './Login.css'
@@ -16,18 +15,8 @@ const QUICK_DEMO = [
   { role: 'admin', label: 'Admin', note: 'See the dashboard', icon: BarChart3 },
 ]
 
-// Seeded demo accounts. Emails only: passwords are set in Supabase and never shown here.
-const DEMO_ACCOUNTS = [
-  { email: 'resident1@demo.test', role: 'Resident · SAMPLE-A-0101' },
-  { email: 'resident2@demo.test', role: 'Resident · SAMPLE-B-0101' },
-  { email: 'collector1@demo.test', role: 'Collector' },
-  { email: 'admin@demo.test', role: 'Admin' },
-]
-
 export default function Login() {
-  const { session, profile, loading, signIn, startDemo } = useAuth()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const { session, profile, loading, startDemo } = useAuth()
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(supabaseConfigError)
 
@@ -42,19 +31,6 @@ export default function Login() {
       await startDemo(account.role)
     } catch (err) {
       setError(err.message)
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
-  async function handleSubmit(event) {
-    event.preventDefault()
-    setError(null)
-    setSubmitting(true)
-    try {
-      await signIn(email.trim(), password)
-    } catch (err) {
-      setError(err.message === 'Invalid login credentials' ? 'Wrong email or password. Please try again.' : err.message)
     } finally {
       setSubmitting(false)
     }
@@ -102,67 +78,6 @@ export default function Login() {
               <p>{error}</p>
             </div>
           )}
-        </section>
-
-        <GlassCard hero>
-          <form className="login__form" onSubmit={handleSubmit} noValidate>
-            <h2 className="login__title login__title--small">Or sign in with email</h2>
-
-            <label className="field">
-              <span className="field__label">Email</span>
-              <span className="field__control">
-                <Mail size={18} className="field__icon" aria-hidden="true" />
-                <input
-                  className="input"
-                  type="email"
-                  autoComplete="username"
-                  placeholder="you@demo.test"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </span>
-            </label>
-
-            <label className="field">
-              <span className="field__label">Password</span>
-              <span className="field__control">
-                <Lock size={18} className="field__icon" aria-hidden="true" />
-                <input
-                  className="input"
-                  type="password"
-                  autoComplete="current-password"
-                  placeholder="Your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </span>
-            </label>
-
-            <button
-              type="submit"
-              className="btn btn--primary btn--block"
-              disabled={submitting || !email || !password || Boolean(supabaseConfigError)}
-            >
-              {submitting ? 'Signing in…' : 'Sign in'}
-            </button>
-          </form>
-        </GlassCard>
-
-        <section className="login__demo" aria-labelledby="demo-title">
-          <h2 id="demo-title" className="login__demo-title">Presenter accounts</h2>
-          <p className="muted login__demo-hint">Tap one to fill the email. Passwords are shared by the presenter.</p>
-          <ul className="login__demo-list">
-            {DEMO_ACCOUNTS.map((account) => (
-              <li key={account.email}>
-                <button type="button" className="login__demo-item" onClick={() => setEmail(account.email)}>
-                  <span className="mono">{account.email}</span>
-                  <span className="muted">{account.role}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
         </section>
       </main>
     </div>

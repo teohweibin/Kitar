@@ -23,57 +23,8 @@
   font-size: 17px;
 }
 
-.login__form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
 .login__title {
   font-size: 20px;
-}
-
-.login__demo-title {
-  font-size: 15px;
-}
-
-.login__demo-hint {
-  margin-top: 2px;
-  font-size: 13px;
-}
-
-.login__demo-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.login__demo-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4px 12px;
-  width: 100%;
-  min-height: 48px;
-  padding: 10px 16px;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-control);
-  background: transparent;
-  text-align: left;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 150ms;
-}
-
-.login__demo-item:hover {
-  background: var(--surface);
-}
-
-.login__title--small {
-  font-size: 16px;
 }
 
 .login__quick {
